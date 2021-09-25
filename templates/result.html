@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Results</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+  </head>
+  <body>
+    <h2>
+      Your Results:
+    </h2>
+    <div class="search-bar-wrapper">
+      <div class="search-bar diagnosis">
+        <h1>
+          {{ diagnosis1 }}
+        </h1>
+        <a href="{{ diagnosis1link }}">More Information</a>
+      </div>
+      <div class="search-bar diagnosis">
+        <h1>
+          {{ diagnosis2 }}
+        </h1>
+        <a href="{{ diagnosis2link }}">More Information</a>
+      </div>
+      <div class="search-bar">
+        <a href="/map">Find a Provider</a>
+      </div>
+    </div>
+  </body>
+</html>

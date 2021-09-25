@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map</title>
+    <link rel="stylesheet" type="text/css" href="static/style.css" />
+  </head>
+  <body>
+    <h2>
+      Providers Nearby:
+    </h2>
+    <div class="search-bar-wrapper" style="width:60%;margin-top:1%;">
+      <div class="search-bar" id="googleMap" style="width:100%;height:500px">
+        <script>
+          function initMap() {
+            therapistLatLng1 = { lat: 34.71500139448173, lng: -86.74090363927375 };
+            therapistLatLng2 = { lat: 34.70497500913351, lng: -86.74148372245612 };
+            therapistLatLng3 = { lat: 34.693077271691386, lng: -86.76480211384283 };
+            const myLatLng = { lat: 34.719302533815586, lng: -86.74228673283386}
+            const map = new google.maps.Map(document.getElementById("googleMap"), {
+              zoom: 14,
+              center: myLatLng
+            });
+
+            new google.maps.Marker({
+              position: therapistLatLng1,
+              map,
+              title: "Nearest Therapist"
+            });
+            new google.maps.Marker({
+              position: therapistLatLng2,
+              map,
+              title: "Next Nearest Therapist"
+            });
+            new google.maps.Marker({
+              position: therapistLatLng3,
+              map,
+              title: "3rd Nearest Therapist"
+            });
+          }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuj-bAfS1xvN70uE9iPYPFqVMpZFs4M3s&callback=initMap"></script>
+      </div>
+    </div>
+  </body>
+</html> 
