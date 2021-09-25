@@ -15,8 +15,8 @@ def word_separate():
     charstring = charstring + char
 
 def word_check(list2):
-  for word in charstring:
-    if  in word:
+  for word in search_list:
+    if key in word:
       print(list2)
 
 word_check(list3)
